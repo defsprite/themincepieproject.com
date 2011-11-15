@@ -1,0 +1,35 @@
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
+@font-face {
+  font-family: "DINCondensed";
+  src: url("../fonts/17618E_0.eot");
+  src: url("../fonts/17618E_0.eot?#iefix") format("embedded-opentype"), url("../fonts/17618E_0.woff") format("woff"), url("../fonts/17618E_0.ttf") format("truetype"); }
+
+body {
+  margin: 0;
+  background: #ffdc50 url("../images/background.png") top center no-repeat;
+  text-align: center;
+  color: #735300;
+  font-family: Georgia, Palatino, serif; }
+
+.container {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto; }
+
+header img {
+  margin-left: -60px; }
+
+h2 {
+  font-size: 1.75em;
+  text-transform: uppercase;
+  font-family: "DINCondensed";
+  margin-top: 0.5em; }
+
+p {
+  font-style: italic;
+  line-height: 1.25em;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em; }
+
+.explanation {
+  text-decoration: underline; }
