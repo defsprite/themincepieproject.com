@@ -5,9 +5,8 @@ Description: TODO
 
 # Install
 
-Make sure to have `haml` `sass`and `sinatra` installed. Start with:
+Make sure to have `frank` installed. Start with:
 
-    ruby -rubygems themincepieproject.rb
+    frank server
 
-
-You should be able to see the app on `http://localhost:4567`
+You should be able to see the app on `http://localhost:3601`

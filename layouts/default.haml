@@ -5,23 +5,17 @@
   %meta(content='The Mince Pie Project' name='description')
   %title The Mince Pie Project
   %link(href='/css/styles.css' rel='stylesheet' type='text/css')
+  %script(src='/js/ebay-auctions.js')
 
   /[if lt IE 9]
     %script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     %link(href='/css/ie.css' media='screen' rel='stylesheet' type='text/css')
 
 %body
+  %header
+    %nav
+      %img(src="images/logo.png")
   .container
-    %header
-      %nav
-        %img(src="images/logo.png")
-    .content
-      %h2 Coming soon...
-      %p.explanation An auction of mince pies baked by some of the UK’s best known chefs
-      %p
-        %small In support of
-      %p
-        %a(href="http://www.actionagainsthunger.org/")
-          %img(src="images/aah.png")
-    %footer
-      %p
+    = yield
+  %footer
+    %p
