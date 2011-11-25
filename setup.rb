@@ -75,3 +75,8 @@ Frank.export.path = "exported"
 #
 # Add any other project setup code, or requires here
 # ....
+require 'compass'
+
+Compass.add_project_configuration 'compass-config.rb'
+
+Frank.sass_options = Compass.sass_engine_options
