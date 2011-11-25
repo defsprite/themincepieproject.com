@@ -2,8 +2,16 @@
 
 @font-face
   font-family: 'DINCondensed'
-  src: url('../fonts/17618E_0.eot')
-  src: url('../fonts/17618E_0.eot?#iefix') format('embedded-opentype'), url('../fonts/17618E_0.woff') format('woff'), url('../fonts/17618E_0.ttf') format('truetype')
+  src: url('/fonts/17618E_0.eot')
+  src: url('/fonts/17618E_0.eot?#iefix') format('embedded-opentype'), url('/fonts/17618E_0.woff') format('woff'), url('/fonts/17618E_0.ttf') format('truetype')
+
+=pie-clearfix
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
 
 body
   margin: 0
@@ -11,20 +19,46 @@ body
   text-align: center
   color: #735300
   font-family: Georgia, Palatino, serif
+  text-align: center
 
 .container
-  width: 300px
-  text-align: center
+  width: 940px
   margin: 0 auto
+  text-align: left
+  +pie-clearfix
 
-header img
-  margin-left: -60px
+.sidebar
+  width: 220px
+  margin-right: 20px
+  float: left
+  img
+    margin-left: -100px
 
-h2
-  font-size: 1.75em
+.main
+  margin-left: 80px
+  width: 620px
+  float: left
+
+header nav ul  
+  font-size: 1.67em
   text-transform: uppercase
   font-family: "DINCondensed"
+  margin-top: 2.75em
+  list-style-type: none
+  +pie-clearfix
+  li
+    float: left
+    margin-right: 25px
+
+h1
+  font-size: 2em
+  font-family: "Adelle Bold", Georgia, serif
+  font-size-adjust: 0.523
+  font-weight: bold
+  font-style: normal
   margin-top: 0.5em
+
+h2
 
 p
   font-style: italic

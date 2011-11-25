@@ -5,17 +5,28 @@
   %meta(content='The Mince Pie Project' name='description')
   %title The Mince Pie Project
   %link(href='/css/styles.css' rel='stylesheet' type='text/css')
+  %link(href="http://f.fontdeck.com/s/css/l4MsFun30OJhB9DTDGcb8JQSAOQ/localhost/13236.css" rel="stylesheet" type="text/css")
   %script(src='/js/ebay-auctions.js')
 
   /[if lt IE 9]
     %script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     %link(href='/css/ie.css' media='screen' rel='stylesheet' type='text/css')
 
-%body
-  %header
-    %nav
-      %img(src="images/logo.png")
+%body    
   .container
-    = yield
+    .sidebar
+      %img(src="images/logo.png")
+    .main
+      %header
+        %nav
+          %ul
+            %li About
+            %li Chefs
+            %li The Auction
+            %li Blog
+            %li Partners
+            %li Charities
+      .content
+        = yield
   %footer
     %p
