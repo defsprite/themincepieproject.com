@@ -15,7 +15,15 @@
 %body    
   .container
     .sidebar
-      %img(src="images/logo.png")
+      %img.logo(src="/images/logo.png")
+      %h3.explanation
+        A Mince Pie Auction.
+        %br
+        Starts 9th December.
+      %p In support of
+      %p
+        %a(href="http://www.actionagainsthunger.org/")
+          %img(src="images/aah.png")
     .main
       %header
         %nav
@@ -28,5 +36,11 @@
             %li Charities
       .content
         = yield
-  %footer
-    %p
+    %footer
+      %p
+        %a About
+        |
+        %a Terms &amp; Conditions
+        |
+        %a Contact
+
