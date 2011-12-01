@@ -15,7 +15,8 @@
 %body    
   .container
     .sidebar
-      %img.logo(src="/images/logo.png")
+      %a(href="/")
+        %img.logo(src="/images/logo.png")
       %h3.explanation
         A Mince Pie Auction.
         %br
@@ -31,19 +32,26 @@
       %header
         %nav
           %ul
-            %li About
-            %li Chefs
-            %li The Auction
-            %li Blog
-            %li Partners
-            %li Charities
+            %li
+              %a(href="/about.html" class="#{active == 'about' ? 'active' : ''}") About
+            %li
+              %a(href="/chefs.html" class="#{active == 'chefs' ? 'active' : ''}") Chefs
+            %li
+              %a(href="/auction.html" class="#{active == 'auction' ? 'active' : ''}") The Auction
+            %li
+              %a(href="/") Blog
+            %li
+              %a(href="/partners.html" class="#{active == 'partners' ? 'active' : ''}") Partners
+            %li
+              %a(href="/charities.html" class="#{active == 'charities' ? 'active' : ''}") Charities
       .content
         = yield
     %footer
       %p
-        %a About
-        |
-        %a Terms &amp; Conditions
-        |
-        %a Contact
+        %nav
+          %a(href="/about.html") About
+          |
+          %a(href="/toc.html") Terms &amp; Conditions
+          |
+          %a(href="/contact.html") Contact
 
