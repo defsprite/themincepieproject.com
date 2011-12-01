@@ -11,8 +11,19 @@ $brown: #735300
   padding: $padding
   +single-box-shadow(#999, 0px, 3px, 5px)
 
+=intro-pic
+  margin:
+    top: 10px
+    bottom: 20px
+    left: 20px
+  float: right
+  +pic-frame(10px)
+
 =adelle
   font-family: "Adelle Bold", Georgia, serif
+  font-size-adjust: 0.523
+  font-weight: bold
+  font-style: normal
 
 =small
   +adelle
@@ -30,6 +41,44 @@ body
   color: $brown
   font-family: Georgia, Palatino, serif
 
+section
+  margin-top: 4em
+  +pie-clearfix
+
+h1
+  font-size: 2em
+  +adelle
+  line-height: 1.25em
+  margin-bottom: 0.75em
+
+h2
+  font-size: 1.75em
+  +adelle
+  margin-bottom: 0.5em
+
+h3
+  font-size: 1.2em
+  margin-bottom: 0.5em
+  .name
+    +adelle
+    padding-right: 5px
+  em
+    font-weight: normal
+
+p
+  line-height: 1.5em
+
+.content p + p
+  margin-top: 1em
+
+a.button
+  padding: 7px 20px
+  background: $brown
+  color: white
+  font-weight: bold
+  +border-radius(5px)
+  +adelle
+
 .container
   width: 940px
   margin: 0 auto
@@ -38,7 +87,9 @@ body
 
 .sidebar
   width: 220px
-  margin-right: 20px
+  margin:
+    right: 20px
+    bottom: 3em
   float: left
   text-align: center
   font-style: italic
@@ -79,34 +130,17 @@ nav a, nav a:visited
   &:hover, &.active
     text-decoration: underline
 
-section
-  margin-top: 4em
-  +pie-clearfix
-
-h1
-  font-size: 2em
-  font-family: "Adelle Bold", Georgia, serif
-  font-size-adjust: 0.523
-  font-weight: bold
-  font-style: normal
-  line-height: 1.25em
-  margin-bottom: 0.75em
-
-p
-  line-height: 1.5em
-
 .intro
   div
     width: 300px
-    margin-right: 20px
     float: left
   img
-    width: 280px
-    float: right
-    +pic-frame(10px)
+    +intro-pic
     +rotate(3deg)
 
 .leaderboard
+  .auction + &
+    margin-top: 2em
   ol li
     padding: 2.75em 0 1em 0
     border-bottom: 1px dotted $brown
@@ -138,13 +172,6 @@ p
       padding-right: 40px
       text-align: right
       font-weight: bold
-    .button
-      padding: 7px 20px
-      background: lighten($brown, 5)
-      color: white
-      font-weight: bold
-      +border-radius(5px)
-      +adelle
 
 .social
   ol
@@ -178,11 +205,37 @@ p
     float: left
     &.wemakewebsites
       margin-right: 40px
+  h1 + p, div + div
+    margin-bottom: 2em
+  div + p
+    margin-top: 2em
+
+.chefs
+  list-style-type: none
+  margin-top: 2em
+  li
+    +pie-clearfix
+    margin-bottom: 2em
+  img
+    width: 120px
+    +pic-frame(10px)
+    float: left
+    margin-right: 20px
+
+.charity
+  margin-top: 1.5em
+  h3
+    margin-bottom: 1em
+  img
+    +intro-pic
+  a, a:visited
+    +adelle
+    color: $brown
 
 footer
   text-align: left
   +small
-  margin: 1em 0
+  margin: 3em 0 1em 0
   clear: both
   a
     margin: 0 10px

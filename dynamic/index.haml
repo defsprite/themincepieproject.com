@@ -10,7 +10,7 @@ active: home
 
 %section.leaderboard
   %h1 The Mince Pie Leaderboard
-  %ol#top_chefs
+  = render_partial "auctions"
 
 %section.social
   %h1 On Twitter
@@ -31,14 +31,3 @@ active: home
   %div
     %img(src="/images/mindmatters.png")
 
-:javascript
-  var i,j = 0;
-  for (i in auctions) {
-    apiCall += "\&ItemID("+ j++ +")="+i;
-  }
-  (function() {
-    var e = document.createElement("script");
-    e.type = 'text/javascript'; e.async = true; e.src = apiCall;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(e, s);
-  })();

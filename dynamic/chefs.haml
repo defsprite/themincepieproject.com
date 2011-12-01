@@ -1,0 +1,17 @@
+layout: default.haml
+active: chefs
+---------------------------------------------META
+
+%section
+  %h1 The Chefs
+  %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+  %ul.chefs
+    - 5.times do
+      %li
+        %img(src="/images/cooks/example_large.jpg")
+        %h2
+          %span.name Cook Name
+          %em Restaurant Name
+        %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        %p
+          %a.button Bid
