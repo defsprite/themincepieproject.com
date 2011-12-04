@@ -21,7 +21,7 @@ function updateList() {
     console.log(items[i]);
     bids = items[i].hasOwnProperty('BidCount') ? items[i]['BidCount'] : "N/A";
     price = items[i].hasOwnProperty('ConvertedCurrentPrice') ? items[i]['ConvertedCurrentPrice']['Value'] : "N/A";
-    elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/cooks/example.jpg'/><span class='name'>" + auctions[items[i]['ItemID']] + "</span><span class='bids'>" + bids + " Bids</span><span class='price'> £ " + price + "</span><a class='button'>Bid</a>";
+    elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/chefs/example.jpg'/><span class='name'>" + auctions[items[i]['ItemID']] + "</span><span class='bids'>" + bids + " Bids</span><span class='price'> £ " + price + "</span><a class='button'>Bid</a>";
     list.appendChild(elem);
   }
 }
