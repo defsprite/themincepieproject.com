@@ -81,11 +81,18 @@ Compass.add_project_configuration 'compass-config.rb'
 
 Frank.sass_options = Compass.sass_engine_options
 
-
-
 CHEFS = []
 file = File.new("chef_data.txt", "r")
 while (line = file.gets)
-  CHEFS << line
+  CHEFS << line.gsub(/\s+$/,'')
 end
 file.close
+
+# Shitty js generation. Can't think of sth better atm
+#file = File.new("static/js/auctions_generated.js", "w")
+#i = 0
+#CHEFS.each_slice(6) do |fields|
+# file.puts "'#{fields[4].to_i+(i += 1)}': {name: '#{fields[0]}', link: '#{fields[3]}', imageurl: '/images/chefs/thumbs/#{fields[0].gsub(/\s+/,"_").downcase}.png'},"
+#end
+#file.close
+

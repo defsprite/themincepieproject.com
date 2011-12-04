@@ -11,7 +11,7 @@ active: chefs
   %ul.chefs
 
 
-    - in_groups_of(CHEFS, 4) do |args|
+    - CHEFS.each_slice(6) do |args|
       %li
         %img(src="/images/chefs/large/#{args[0].strip.gsub(/\s+/,"_").downcase}.png")
         %h2
