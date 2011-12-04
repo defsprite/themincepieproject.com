@@ -1,8 +1,18 @@
 var items = [],
   apiCall = "http://open.api.ebay.com/shopping?appid=Christop-5831-4ff4-9ba6-183e33d0c1de&version=517&siteid=3&callname=GetMultipleItems&responseencoding=JSON&callback=true",
-  auctions = { "150701261414": "Barney Stintson",
+  auctions = {
+    "150701261414": "Barney Stintson",
     "140643731188": "Robin Scherbatsky",
-    "300625370816": "Ted Mosby" };
+    "300625370816": "Ted Mosby"
+  };
+
+  auctions2 = {
+    "150701261414": "Barney Stintson",
+    "140643731188": "Robin Scherbatsky",
+    "300625370816": "Ted Mosby"
+  };
+
+
 
 function _cb_GetMultipleItems(args) {
   // console.log(args);
