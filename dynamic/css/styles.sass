@@ -79,6 +79,7 @@ a.button
   +border-radius(5px)
   +adelle
 
+
 .container
   width: 940px
   margin: 0 auto
@@ -113,7 +114,7 @@ a.button
   width: 620px
   float: left
 
-header nav ul  
+header nav ul
   font-size: 1.67em
   text-transform: uppercase
   font-family: "DINCondensed"
@@ -200,11 +201,13 @@ nav a, nav a:visited
   div
     +pic-frame(10px)
     width: 290px
-    padding: 40px 0
+    padding: 0 0
     text-align: center
     float: left
-    &.wemakewebsites
+    &.mindmatters, &.citysprint, &.nakedwines
       margin-right: 40px
+    &.mindmatters, &.wemakewebsites
+      padding: 13px 0
   h1 + p, div + div
     margin-bottom: 2em
   div + p
@@ -221,6 +224,9 @@ nav a, nav a:visited
     +pic-frame(10px)
     float: left
     margin-right: 20px
+  h2 em
+    font-size: 0.8em
+
 
 .charity
   margin-top: 1.5em

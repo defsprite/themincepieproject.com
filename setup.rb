@@ -80,3 +80,12 @@ require 'compass'
 Compass.add_project_configuration 'compass-config.rb'
 
 Frank.sass_options = Compass.sass_engine_options
+
+
+
+CHEFS = []
+file = File.new("chef_data.txt", "r")
+while (line = file.gets)
+  CHEFS << line
+end
+file.close

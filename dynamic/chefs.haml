@@ -4,14 +4,20 @@ active: chefs
 
 %section
   %h1 The Chefs
-  %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+  %p
+    We’ve lined up 35 of the UK’s best chefs to each cook 50 exclusive mince pies for The Mince Pie Project.
+    See below for the names and descriptions chefs involved and click on the links to make a bid for their batch of 50 pies.
+
   %ul.chefs
-    - 5.times do
+
+
+    - in_groups_of(CHEFS, 4) do |args|
       %li
-        %img(src="/images/cooks/example_large.jpg")
+        %img(src="/images/chefs/large/#{args[0].strip.gsub(/\s+/,"_").downcase}.png")
         %h2
-          %span.name Cook Name
-          %em Restaurant Name
-        %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          %span.name= args[0]
+          %em= args[1]
+        %p= args[2]
         %p
           %a.button Bid
+
