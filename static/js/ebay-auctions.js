@@ -54,7 +54,7 @@ function _cb_GetMultipleItems(args) {
 }
 
 function updateList() {
-  var i, list, elem, e, price, bids, data, sortedList = [];
+  var i, list, elem, e, price, bids, data, sortedList = [], max;
   list = document.getElementById("top_chefs");
 
   for (i = 0; i < items.length; i++) {
@@ -68,7 +68,9 @@ function updateList() {
     return a[3] < b[3] ? 1 : -1;
   });
 
-  for (i = 0; i < sortedList.length; i++) {
+  max = list.getAttribute("data-count") || sortedList.length;
+
+  for (i = 0; i < max; i++) {
     elem = document.createElement("li");
     e = sortedList[i];
     elem.innerHTML = template(i+1, e[0], e[1], e[2], e[3]);
@@ -82,6 +84,7 @@ function template(index, url, name, bids, price) {
 
 function getAuctions(auctions, apiCall) {
   var i, j = 0;
+
   for (i in auctions) {
     if (auctions.hasOwnProperty(i)) apiCall += "&ItemID(" + j++ + ")=" + i;
   }
@@ -92,5 +95,4 @@ function getAuctions(auctions, apiCall) {
   e.src = apiCall;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(e, s);
-
 }
