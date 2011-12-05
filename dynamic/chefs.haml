@@ -10,11 +10,10 @@ active: chefs
 
   %ul.chefs
 
-
     - in_groups_of(CHEFS, 4) do |args|
       %li
         %img(src="/images/chefs/large/#{args[0].strip.gsub(/\s+/,"_").downcase}.png")
-        %h2
+        %h3
           %span.name= args[0]
           %em= args[1]
         %p= args[2]
