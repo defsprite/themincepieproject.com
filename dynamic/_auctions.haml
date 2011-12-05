@@ -1,3 +1,22 @@
 :javascript
-  getAuctions(auctions1, apiCall1);
-  getAuctions(auctions2, apiCall2);
+  function updateAuctions(data) {
+    var i, list, elem, e, max;
+    list = document.getElementById("top_chefs");
+
+    max = list.getAttribute("data-count") || data.length;
+
+    for (i = 0; i < max; i++) {
+      elem = document.createElement("li");
+      e = data[i];
+      elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/chefs/thumbs/" + e['image'] + "'/><span class='name'>" + name + "</span><span class='bids'>" + e['bids'] + " Bids</span><span class='price'> £ " + e['price'] + "</span><a href='"+ e['link']+"' class='button'>Bid</a>"
+      list.appendChild(elem);
+    }
+  }
+  (function() {
+    var e = document.createElement("script");
+    e.type = 'text/javascript';
+    e.async = true;
+    e.src = 'http://auctions.themincepieproject.com/ebay-auctions.js?'+(new Date()).getTime();
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(e, s);
+  })();
