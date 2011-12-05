@@ -9,7 +9,7 @@ $brown: #735300
 =pic-frame($padding)
   background: white
   padding: $padding
-  +single-box-shadow(#999, 0px, 3px, 5px)
+  +single-box-shadow(#b89300, 0px, 3px, 5px)
 
 =intro-pic
   margin:
@@ -70,6 +70,9 @@ p
 
 .content p + p
   margin-top: 1em
+
+a, a:visited
+  color: $brown
 
 a.button
   padding: 7px 20px
@@ -225,10 +228,9 @@ nav a, nav a:visited
     width: 120px
     +pic-frame(10px)
     float: left
-    margin-right: 20px
-  h2 em
-    font-size: 0.8em
-
+    margin:
+      right: 20px
+      bottom: 1em
 
 .charity
   margin-top: 1.5em
