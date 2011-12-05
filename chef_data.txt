@@ -36,7 +36,7 @@ Antonin is head chef of The Greenhouse, a Michelin starred restaurant in the hea
 ---
 Ashley Palmer-Watts
 Dinner by Heston
-Ashley is the Executive Head Chef for the Fat Duck group and currently heads up Michelin starred Dinner by Heston Blumenthal.  In his typically inventive and adventurous style, he has created a unique deep-fried mince pie, to be deep-fried from frozen by the winning bidder.
+Ashley is the Executive Head Chef for the Fat Duck group and currently heads up the kitchen at Michelin starred Dinner by Heston Blumenthal. He has created a unique and delicious deep-fried mince pie, which will be given to the winning bidder frozen and ready to cook and enjoy.
 #
 150701261414
 ---
@@ -102,7 +102,7 @@ Gregg is best known for his role as co-presenter of Masterchef.  He made his nam
 ---
 Henry Harris
 Racine
-Henry is known for a bold and traditional cooking style at Racine, which has garnered many awards since opening in 2002. His father sells luxury spirits to London restaurants; therefore it’s appropriate that he will be making a prune & Armagnac version of mince pies for the winning bidder.
+Henry Harris is renowned for his bold, traditional menus at his award-winning restaurant Racine in London’s Knightsbridge. In homage to the good French bourgeois cooking style that he dearly loves, he has created a Prune & Armagnac version for the winning bidder.
 #
 150701261414
 ---
@@ -174,7 +174,7 @@ Phil has been Head Chef and co-owner of two Michelin starred The Square for the 
 ---
 Raymond Blanc
 Le Manoir aux Quat’ Saisons
-Despite never having been formally trained, Raymond has maintained two Michelin stars for a staggering 28 years, as Chef Patron at Le Manoir aux Quat’ Saisons.  He has created his mince pies with Benoit Blin, a Master of Culinary Arts and one of Europe’s leading pastry chefs.
+Raymond has maintained two Michelin stars for 28 years, as Chef Patron at Le Manoir aux Quat’Saisons.  He has created his mince pies with Benoit Blin, Chef Patissier at Le Manoir.a Master of Culinary Arts and one of Europe’s most respected pastry chef’s.
 #
 150701261414
 ---
@@ -187,6 +187,12 @@ Originally from Brittany in North West France, Richard worked extensively in bot
 Skye Gyngell
 Petersham Nurseries Cafe
 Head chef of Michelin starred Petersham Nurseries Cafe, Skye has won numerous awards for her simple cooking style, and been compared by critics to legendary cook Alice Walters.  She has written a weekly column in the Independent on Sunday, and published three books.
+#
+150701261414
+---
+Stevie Parle
+The Dock Kitchen
+Stevie is chef patron at Dock Kitchen.  He was named Young Chef Of The Year by the Observer Food Monthly Magazine in October 2010 and writes a weekly food column for the Saturday Telegraph Weekend Section.
 #
 150701261414
 ---
