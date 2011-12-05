@@ -71,6 +71,12 @@ p
 .content p + p
   margin-top: 1em
 
+p.more
+  +small
+  margin-top: 1.5em
+  a
+    text-decoration: underline
+
 a, a:visited
   color: $brown
 
@@ -108,6 +114,8 @@ a.button
       text-decoration: underline
   h3
     font-size: 1.25em
+  .jof
+    margin-top: 2em
   .sharing
     margin-top: 3em
 
@@ -146,39 +154,56 @@ nav a, nav a:visited
 .leaderboard
   .auction + &
     margin-top: 2em
-  ol li
-    padding: 2.75em 0 1em 0
-    border-bottom: 1px dotted $brown
-    +clearfix
-    .number, .name, img, .bids, .price
-      float: left
-      vertical-align: middle
-    .number
-      width: 26px
-      font-family: "DINCondensed", Arial, "Helvetica Neue", "HelveticaNeue", Helvetica, sans
-      font-size: 1.5em
-      color: white
-      background: url(/images/bg_number.png) top left no-repeat
-      padding: 13px 20px 13px 10px
-      text-align: center
-      margin-top: -15px
-    img
-      width: 70px
-      margin:
-        top: -30px
-        right: 20px
-      +pic-frame(5px)
-    .name
-      width: 150px
-    .bids
-      width: 80px
-      padding-right: 40px
-      text-align: right
-    .price
-      width: 80px
-      padding-right: 40px
-      text-align: right
-      font-weight: bold
+  ol
+    &.inactive
+      +opacity(0.5)
+      position: relative
+      &:after
+        content: "Bidding starts at 9 a.m. on December 9th"
+        position: absolute
+        top: 100px
+        left: 180px
+        width: 220px
+        padding: 4em 30px
+        +adelle
+        font-size: 1.25em
+        line-height: 1.5em
+        background: darken($brown, 33)
+        color: white
+        text-align: center
+    li
+      padding: 2.75em 0 1em 0
+      border-bottom: 1px dotted $brown
+      +clearfix
+      .number, .name, img, .bids, .price
+        float: left
+        vertical-align: middle
+      .number
+        width: 26px
+        font-family: "DINCondensed", Arial, "Helvetica Neue", "HelveticaNeue", Helvetica, sans
+        font-size: 1.5em
+        color: white
+        background: url(/images/bg_number.png) top left no-repeat
+        padding: 13px 20px 13px 10px
+        text-align: center
+        margin-top: -15px
+      img
+        width: 70px
+        margin:
+          top: -30px
+          right: 20px
+        +pic-frame(5px)
+      .name
+        width: 150px
+      .bids
+        width: 80px
+        padding-right: 40px
+        text-align: right
+      .price
+        width: 80px
+        padding-right: 40px
+        text-align: right
+        font-weight: bold
 
 .social
   ol
@@ -197,11 +222,6 @@ nav a, nav a:visited
         margin-right: 40px
       a, a:visited
         color: white
-  > p
-    +small
-    margin-top: 1.5em
-    a
-      text-decoration: underline
 
 .partners
   div
