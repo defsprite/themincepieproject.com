@@ -75,6 +75,7 @@ Frank.export.path = "exported"
 #
 # Add any other project setup code, or requires here
 # ....
+Frank.haml_options = { :format => :html5, :ugly => false }
 require 'compass'
 
 Compass.add_project_configuration 'compass-config.rb'
