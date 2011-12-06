@@ -6,10 +6,14 @@
 
 $brown: #735300
 
+=pie-behaviour
+  behavior: url(PIE.htc)
+
 =pic-frame($padding)
   background: white
   padding: $padding
   +single-box-shadow(#b89300, 0px, 3px, 5px)
+  +pie-behaviour
 
 =intro-pic
   margin:
@@ -88,6 +92,7 @@ a.button
   text-decoration: none
   +border-radius(5px)
   +adelle
+  +pie-behaviour
 
 
 .container
@@ -172,6 +177,7 @@ nav a, nav a:visited
         color: white
         text-align: center
     li
+      list-style-type: none
       padding: 2.75em 0 1em 0
       border-bottom: 1px dotted $brown
       +clearfix
@@ -230,14 +236,13 @@ nav a, nav a:visited
     padding: 0 0
     text-align: center
     float: left
+    margin-bottom: 2em
     &.mindmatters, &.citysprint, &.nakedwines
       margin-right: 40px
     &.mindmatters, &.wemakewebsites
       padding: 13px 0
-  h1 + p, div + div
+  p
     margin-bottom: 2em
-  div + p
-    margin-top: 2em
 
 .chefs
   list-style-type: none
