@@ -13,14 +13,11 @@ while (line = file.gets)
 end
 file.close
 
-i = 0
 item_ids = []
 CHEFS.each_slice(6) do |fields|
- # file.puts "'#{fields[4].to_i+(i += 1)}': {name: '#{fields[0]}', link: '#{fields[3]}', imageurl: '/images/chefs/thumbs/#{fields[0].gsub(/\s+/,"_").downcase}.png'},"
- item_id = "#{fields[4].to_i+i}"
+ item_id = "#{fields[4].to_i}"
  item_ids << item_id
- CHEF_INFO[item_id] = {:name => "#{fields[0]}", :link => "#{fields[3]}", :image => "#{fields[0].gsub(/\s+/,"_").downcase}.png"}
- i += 1
+ CHEF_INFO[item_id] = {:name => "#{fields[0]}", :image => "#{fields[0].gsub(/\s+/,"_").downcase}.png"}
 end
 
 responses = []
@@ -36,14 +33,17 @@ responses.each do |res|
   items.concat(res['Item'] || [])
 end
 
-items.sort! {|a, b| b['ConvertedCurrentPrice']['Value'].to_f <=> a['ConvertedCurrentPrice']['Value'].to_f }
+output = []
 
 items.each do |item|
-  CHEF_INFO[item['ItemID']].merge!({:price => item['ConvertedCurrentPrice']['Value'], :bids => item['BidCount'] })
+  output << CHEF_INFO[item['ItemID']].merge({:eid => item['ItemID'], :link => item['ViewItemURLForNaturalSearch'], :price => item['ConvertedCurrentPrice']['Value'], :bids => item['BidCount'] })
+  # output << CHEF_INFO[item['ItemID']].merge({:eid => item['ItemID'], :price => 0, :bids => 0 })
 end
 
+output.sort! {|a,b| a[:price] == b[:price] ? a[:name] <=> b[:name] : b[:price] <=> a[:price]}
+
 file = File.new("ebay-auctions.js", "w")
-file.puts "updateAuctions(#{JSON.generate(CHEF_INFO)});"
+file.puts "updateAuctions(#{JSON.generate(output)});"
 file.close
 
-
+#system("cp ebay-auctions.js www/")
