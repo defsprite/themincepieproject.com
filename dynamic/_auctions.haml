@@ -1,6 +1,6 @@
 :javascript
   function updateAuctions(data) {
-    var i, list, elem, e, max;
+    var i, list, elem, e, max, total = 0.0;
     list = document.getElementById("top_chefs");
 
     max = list.getAttribute("data-count") || data.length;
@@ -8,9 +8,16 @@
     for (i = 0; i < max; i++) {
       elem = document.createElement("li");
       e = data[i];
-      elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/chefs/thumbs/" + e['image'] + "'/><span class='name'>" + e['name'] + "</span><span class='bids'>" + e['bids'] + " Bids</span><span class='price'> £ " + e['price'] + "</span><a href='"+ e['link']+"' class='button'>Bid</a>"
+      total += parseFloat(e['price']);
+      elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/chefs/thumbs/" + e['image'] + "'/><span class='name'>" + e['name'] + "</span><span class='bids'>" + e['bids'] + " Bids</span><span class='price'> £ " + e['price'].toFixed(2) + "</span><a href='"+ e['link']+"' class='button'>Bid</a>"
       list.appendChild(elem);
     }
+
+    elem = document.getElementById("total");
+    if(elem) {
+      elem.innerHTML = "<em>Total raised so far: £ "+ parseInt(total) +"</em>";
+    }
+
   }
   (function() {
     var e = document.createElement("script");
