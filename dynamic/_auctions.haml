@@ -9,7 +9,7 @@
       elem = document.createElement("li");
       e = data[i];
       total += parseFloat(e['price']);
-      elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/chefs/thumbs/" + e['image'] + "'/><span class='name'>" + e['name'] + "</span><span class='bids'>" + e['bids'] + " Bids</span><span class='price'> £ " + e['price'].toFixed(2) + "</span><a href='"+ e['link']+"' class='button'>Bid</a>"
+      elem.innerHTML = "<span class='number'>" + (i+1) + "</span><img src='/images/chefs/thumbs/" + e['image'] + "'/><span class='name'>" + e['name'] + "</span><span class='bids'>" + e['bids'] + " Bids</span><span class='price'> £ " + e['price'].toFixed(2) + "</span><a href='"+ e['link']+"' class='button' onclick='javascript:alert(\"Sorry, the auction has ended.\"); return false'>Bid</a>"
       list.appendChild(elem);
     }
 
